@@ -1,32 +1,33 @@
-/**
- * Main App Component
- *
- * TODO untuk mentee:
- * 1. Import Home page component (setelah dibuat)
- * 2. Render Home component di sini
- * 3. Atau setup routing jika membuat multiple pages
- *
- * Current: Placeholder untuk testing Tailwind setup
- */
+import { AboutSection } from './components/AboutSection';
+import { ContactForm } from './components/ContactForm';
+import { ContactPreview } from './components/ContactPreview';
+import { FaqSection } from './components/FaqSection';
+import { Footer } from './components/Footer';
+import { Header } from './components/Header';
+import { HeroSection } from './components/HeroSection';
+import { IndustrySection } from './components/IndustrySection';
+import { ProcessSection } from './components/ProcessSection';
+import { ProjectsSection } from './components/ProjectsSection';
+import { ServicesSection } from './components/ServicesSection';
+import { TestimonialsSection } from './components/TestimonialsSection';
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Company Profile Assignment
-        </h1>
-        <p className="text-lg text-gray-600 mb-6">
-          Start building your components!
-        </p>
-        <div className="space-y-2 text-sm text-gray-500">
-          <p>TailwindCSS configured</p>
-          <p>Folder structure ready</p>
-          <p>Check README.md for instructions</p>
-        </div>
-      </div>
+    <div className="min-h-screen bg-ink text-white antialiased">
+      <Header />
+      <main id="main-content">
+        <HeroSection />
+        <AboutSection />
+        <ProcessSection />
+        <ServicesSection />
+        <IndustrySection />
+        <ProjectsSection />
+        <TestimonialsSection />
+        <FaqSection />
+        <ContactPreview />
+        <ContactForm />
+      </main>
+      <Footer />
     </div>
   );
 }
-
-export default App;
